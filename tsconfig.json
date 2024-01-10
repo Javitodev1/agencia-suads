@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": "/home/javier/Dev/Luisita-Marketing/website",
+    "paths": {
+      "@/*": ["./src/*"],
+      "#/*": ["./public/*"],
+    }
+  }
+}

@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets"
+import monitor from "#/monitor.png"
+---
+
+<section
+  class="-mt-10 clip bg-white h-20"
+>
+</section>
+
+<section 
+  class="absolute"
+>
+  <Image src={monitor} alt="campaign-metrics" class="w-1/2 mx-auto"/>
+</section>
+
+<style>
+  .clip {
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+  }
+</style>

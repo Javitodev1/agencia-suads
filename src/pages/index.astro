@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@/components/Navbar.astro";
+import Header from "@/components/Header.astro";
+import Content from "@/components/Content.astro";
+import background from "#/background.jpg";
+console.log(background);
+---
+
+<Layout title="Suadads">
+	<Navbar
+		anchors={[
+			{ url: "/", content: "Inicio" },
+			{ url: "/", content: "Servicios" },
+			{ url: "/", content: "Contacto" },
+			{ url: "/", content: "Conocenos" },
+		]}
+	/>
+
+	<Header />
+	<Content />
+</Layout>
