@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "agenciasuads.com",
-  "Id": "e8f06965-bb11-463d-973b-00de3bf4c434"
-}
