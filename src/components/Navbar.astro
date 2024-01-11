@@ -1,4 +1,6 @@
 ---
+import Logo from "../images/svg/Logo.astro";
+
 interface Anchor {
   url: string;
   content: string;
@@ -12,14 +14,16 @@ const { anchors } = Astro.props;
 
 <nav class="absolute top-0 left-0 bg-transparent w-full z-20">
   <header
-    class="container m-auto flex justify-between items-center text-gray-700"
+    class="container m-auto flex justify-between items-center text-gray-700 py-4 px-4"
   >
-    <h1 class="pl-8 py-4 text-xl font-bold uppercase text-white">
-      suadads
-    </h1>
+    <span class="flex justify-center items-center gap-2">
+      <Logo class="h-10 w-10" />
+      <h1 class="text-xl font-bold uppercase text-white">suads</h1>
+    </span>
+
     <ul
       class={`
-      hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer
+      hidden md:flex items-center text-base font-semibold cursor-pointer
       [&>li]:py-4 [&>li]:px-6 [&>li]:rounded [&>li]:text-white
     `}
     >
@@ -33,7 +37,7 @@ const { anchors } = Astro.props;
     </ul>
 
     <!-- Mobile Response -->
-<!-- 
+    <!-- 
     <button
       class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200 group"
     >

@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets"
+
+interface Article {
+  title:string,
+  tHighlight?: string,
+  content: string,
+  cHighlight?: string,
+  imageSrc: ImageMetadata,
+  imageAlt: string,
+  start: 'left' | 'right',
+}
+
+const { title, tHighlight, content, cHighlight, imageSrc, imageAlt, start} = Astro.props;
+---
+
+<article class="flex gap-4 py-12">
+  <div class="w-1/2" class:list={[
+    {"order-last": start === 'right'},
+    {"pr-4": start === 'left'},
+    {"pl-4": start === 'right'},
+    ]}>
+    <h1 class="mb-4 text-3xl font-semibold text-blue-900">{title} <span class="text-pink-600">{tHighlight}</span></h1>
+    <p class="text-xl text-balance text-blue-950 leading-relaxed">{content} <span class="text-pink-600">{cHighlight}</span></p>
+  </div>
+  <div class="w-1/2">
+    <Image src={imageSrc} alt={imageAlt} class="rounded-md">
+  </div>
+</article>

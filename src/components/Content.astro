@@ -1,17 +1,86 @@
 ---
-import { Image } from "astro:assets"
-import monitor from "../../public/monitor.png"
+import { Image } from "astro:assets";
+import monitorImg from "../images/monitor.png";
+import associatedImg from "../images/associated.jpg";
+
+import Logo from "../images/svg/Logo.astro";
+import Article from "../components/ui/Article.astro";
+
+import ArticleImage1 from "../images/article1.jpg";
+import ArticleImage2 from "../images/article2.jpg";
+import ArticleImage3 from "../images/article3.jpg";
 ---
 
-<section
-  class="-mt-10 clip bg-white h-20"
->
+<section class="-mt-10 clip bg-white h-20 w-full"></section>
+
+<section class="flex flex-col items-center w-full bg-white">
+  <Image src={monitorImg} alt="campaign-metrics" class="w-1/2 -mt-32 z-10" />
+  <Image
+    src={associatedImg}
+    alt="associated-with-suads"
+    class="w-3/4 opacity-60"
+  />
 </section>
 
-<section 
-  class="absolute"
->
-  <Image src={monitor} alt="campaign-metrics" class="w-1/2 mx-auto"/>
+<div class="inline-flex items-center justify-center w-full bg-white pt-20 pb-4">
+  <hr class="w-3/4 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-40000" />
+  <Logo class="w-20 h-20 absolute bg-white" />
+</div>
+
+<section class="flex flex-col items-center bg-white">
+  <div class="container px-10">
+    <header class="flex mt-20">
+      <div class="w-1/2">
+        <p class="text-lg font-semibold uppercase tracking-wide text-blue-950 pl-3">
+          ¿ p o r q u é <span class="px-2"></span> s u a d s ?
+        </p>
+        <h2 class="text-7xl uppercase font-semibold text-blue-900 mt-10">
+          mejora el rendimiento <span class="text-pink-500"
+            >de tus campañas</span>
+        </h2>
+      </div>
+
+      <div class="w-1/2 mt-72 mb-16">
+        <p class="text-2xl tracking-wider leading-loose text-blue-950">
+          El algoritmo propio de Suads analiza las reacciones y emociones
+          detallando el <strong>ratio de aceptación de tu audiencia y el nivel de
+          retención de tu contenido.</strong>
+        </p>
+      </div>
+    </header>
+
+    <!-- First -->
+    <Article
+      title="Analiza a tu audiencia de manera"
+      tHighlight="mucho más rápida y precisa"
+      content=`Crea campañas que funcionen mejor que nunca con Feeder, ya que podrás
+        analizar a tu Audiencia de manera rápida, sencilla y precisa y así poder
+        aumentar el Impacto y el Engagement de los contenidos de tus clientes.`
+      imageSrc={ArticleImage1}
+      imageAlt="woman-smiling-boy-running"
+      start="left"
+    />
+
+    <!-- Second -->
+    <Article
+      title="Lleva tus anuncios"
+      tHighlight="a lo más alto"
+      content=`Optimiza el Rendimiento de tus campañas obteniendo una mejora instantánea en los Resultados de tus ads gracias al análisis en tiempo real de Feeder.`
+      imageSrc={ArticleImage2}
+      imageAlt="three-women-laughing"
+      start="right"
+    />
+
+    <!-- Third -->
+    <Article
+      title="Consigue"
+      tHighlight="mejores productos y servicios"
+      content=`Testea el Impacto de tus creaciones en tu audiencia; aprende de tu Target y lleva a tu producto al siguiente nivel.`
+      imageSrc={ArticleImage3}
+      imageAlt="2-men-cheerful"
+      start="left"
+    />
+  </div>
 </section>
 
 <style>
