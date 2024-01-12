@@ -1,3 +1,7 @@
+---
+import i18n from "@/i18n/home/es.json";
+---
+
 <!-- Header -->
 <section
   class="bg-image bg-fixed bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen w-full"
@@ -9,18 +13,19 @@
     <!-- Header Content -->
 
     <h2 class="text-6xl font-semibold mx-auto mb-10">
-      Mejora los resultados de tus<br />campañas con <strong
-        class="text-pink-600">IA predictiva</strong
-      >
+      {i18n.HEADER.TITLE}
+      <strong class="text-pink-600">{i18n.HEADER.TITLE_HL}</strong>
     </h2>
     <p class="text-xl">
-      Entiende cómo reacciona tu audiencia y predice el impacto de tus <br />
-      contenidos <strong>para conseguir mejores resultados</strong>
+      {i18n.HEADER.SUBTITLE_L1}
+      <br />
+      {i18n.HEADER.SUBTITLE_L2}
+      <strong>{i18n.HEADER.SUBTITLE_HL}</strong>
     </p>
     <a
       href="#"
       class="inline-block mt-10 bg-pink-600 px-12 py-3 rounded-full font-semibold text-lg shadow-md shadow-pink-400"
-      >Crea tu cuenta gratis</a
+      >{i18n.HEADER.CALL_TO_ACTION}</a
     >
   </header>
 </section>

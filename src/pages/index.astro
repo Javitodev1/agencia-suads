@@ -3,15 +3,17 @@ import Layout from "@/layouts/Layout.astro";
 import Navbar from "@/components/Navbar.astro";
 import Header from "@/components/Header.astro";
 import Content from "@/components/Content.astro";
+
+import i18n from "@/i18n/home/es.json";
 ---
 
-<Layout title="Suads">
+<Layout title={i18n.TITLE_SEO}>
 	<Navbar
 		anchors={[
-			{ url: "/", content: "Inicio" },
-			{ url: "/", content: "Servicios" },
-			{ url: "/", content: "Contacto" },
-			{ url: "/", content: "Conocenos" },
+			{ url: "/", content: i18n.NAVBAR.HOME },
+			{ url: "/", content: i18n.NAVBAR.SERVICES },
+			{ url: "/", content: i18n.NAVBAR.CONTACT },
+			{ url: "/", content: i18n.NAVBAR.ABOUT },
 		]}
 	/>
 

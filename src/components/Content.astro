@@ -9,6 +9,8 @@ import Article from "@/components/ui/Article.astro";
 import ArticleImage1 from "@/images/article1.jpg";
 import ArticleImage2 from "@/images/article2.jpg";
 import ArticleImage3 from "@/images/article3.jpg";
+
+import i18n from "@/i18n/home/es.json";
 ---
 
 <section class="-mt-10 clip bg-white h-20 w-full"></section>
@@ -31,31 +33,31 @@ import ArticleImage3 from "@/images/article3.jpg";
   <div class="container px-10">
     <header class="flex mt-20">
       <div class="w-1/2">
-        <p class="text-lg font-semibold uppercase tracking-wide text-blue-950 pl-3">
+        <p
+          class="text-lg font-semibold uppercase tracking-wide text-blue-950 pl-3"
+        >
           ¿ p o r q u é <span class="px-2"></span> s u a d s ?
         </p>
         <h2 class="text-7xl uppercase font-semibold text-blue-900 mt-10">
-          mejora el rendimiento <span class="text-pink-500"
-            >de tus campañas</span>
+          {i18n.WHY_US_SECTION.TITLE}
+          <span class="text-pink-500">{i18n.WHY_US_SECTION.TITLE_HL}</span>
         </h2>
       </div>
 
       <div class="w-1/2 mt-72 mb-16">
         <p class="text-2xl tracking-wider leading-loose text-blue-950">
-          El algoritmo propio de Suads analiza las reacciones y emociones
-          detallando el <strong>ratio de aceptación de tu audiencia y el nivel de
-          retención de tu contenido.</strong>
+          {i18n.WHY_US_SECTION.SUBTITLE}<strong
+            >{i18n.WHY_US_SECTION.SUBTITLE_HL}</strong
+          >
         </p>
       </div>
     </header>
 
     <!-- First -->
     <Article
-      title="Analiza a tu audiencia de manera"
-      tHighlight="mucho más rápida y precisa"
-      content=`Crea campañas que funcionen mejor que nunca con Feeder, ya que podrás
-        analizar a tu Audiencia de manera rápida, sencilla y precisa y así poder
-        aumentar el Impacto y el Engagement de los contenidos de tus clientes.`
+      title={i18n.WHY_US_SECTION.A1_TITLE}
+      tHighlight={i18n.WHY_US_SECTION.A1_TITLE_HL}
+      content={i18n.WHY_US_SECTION.A1_BODY}
       imageSrc={ArticleImage1}
       imageAlt="woman-smiling-boy-running"
       start="left"
@@ -63,9 +65,9 @@ import ArticleImage3 from "@/images/article3.jpg";
 
     <!-- Second -->
     <Article
-      title="Lleva tus anuncios"
-      tHighlight="a lo más alto"
-      content=`Optimiza el Rendimiento de tus campañas obteniendo una mejora instantánea en los Resultados de tus ads gracias al análisis en tiempo real de Feeder.`
+      title={i18n.WHY_US_SECTION.A2_TITLE}
+      tHighlight={i18n.WHY_US_SECTION.A2_TITLE_HL}
+      content={i18n.WHY_US_SECTION.A2_BODY}
       imageSrc={ArticleImage2}
       imageAlt="three-women-laughing"
       start="right"
@@ -73,9 +75,9 @@ import ArticleImage3 from "@/images/article3.jpg";
 
     <!-- Third -->
     <Article
-      title="Consigue"
-      tHighlight="mejores productos y servicios"
-      content=`Testea el Impacto de tus creaciones en tu audiencia; aprende de tu Target y lleva a tu producto al siguiente nivel.`
+      title={i18n.WHY_US_SECTION.A3_TITLE}
+      tHighlight={i18n.WHY_US_SECTION.A3_TITLE_HL}
+      content={i18n.WHY_US_SECTION.A3_BODY}
       imageSrc={ArticleImage3}
       imageAlt="2-men-cheerful"
       start="left"
