@@ -2,12 +2,12 @@
 import Layout from "@/layouts/Layout.astro";
 import Navbar from "@/components/Navbar.astro";
 import Header from "@/components/Header.astro";
-import Content from "@/components/Content.astro";
+import WhyUs from "@/components/WhyUs.astro";
 
 import i18n from "@/i18n/home/es.json";
 ---
 
-<Layout title={i18n.TITLE_SEO}>
+<Layout title={i18n.TITLE_SEO} description={i18n.DESCRIPTION_SEO}>
 	<Navbar
 		anchors={[
 			{ url: "/", content: i18n.NAVBAR.HOME },
@@ -17,6 +17,6 @@ import i18n from "@/i18n/home/es.json";
 		]}
 	/>
 
-	<Header />
-	<Content />
+	<Header i18n={i18n} />
+	<WhyUs i18n={i18n} />
 </Layout>

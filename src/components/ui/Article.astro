@@ -14,16 +14,16 @@ interface Article {
 const { title, tHighlight, content, cHighlight, imageSrc, imageAlt, start} = Astro.props;
 ---
 
-<article class="flex gap-4 py-12">
-  <div class="w-1/2" class:list={[
-    {"order-last": start === 'right'},
-    {"pr-4": start === 'left'},
-    {"pl-4": start === 'right'},
+<article class="md:flex md:gap-4 py-12">
+  <div class="md:w-1/2" class:list={[
+    {"md:order-last": start === 'right'},
+    {"md:pr-4": start === 'left'},
+    {"md:pl-4": start === 'right'},
     ]}>
-    <h1 class="mb-4 text-3xl font-semibold text-blue-900">{title} <span class="text-pink-600">{tHighlight}</span></h1>
-    <p class="text-xl text-balance text-blue-950 leading-relaxed">{content} <span class="text-pink-600">{cHighlight}</span></p>
+    <h1 class="mb-4 text-3xl font-semibold text-blue-900">{title} <strong class="text-pink-600">{tHighlight}</strong></h1>
+    <p class="text-xl text-balance text-blue-950 leading-relaxed">{content} <strong class="text-pink-600">{cHighlight}</strong></p>
   </div>
-  <div class="w-1/2">
+  <div class="md:w-1/2">
     <Image src={imageSrc} alt={imageAlt} class="rounded-md">
   </div>
 </article>

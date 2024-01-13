@@ -1,5 +1,9 @@
 ---
-import i18n from "@/i18n/home/es.json";
+import type { Home } from "@/i18n/home/type"
+interface Props {
+  i18n: Home
+}
+const { i18n } = Astro.props
 ---
 
 <!-- Header -->

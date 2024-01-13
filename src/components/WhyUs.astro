@@ -1,50 +1,54 @@
 ---
+import Article from "@/components/ui/Article.astro";
 import { Image } from "astro:assets";
-import monitorImg from "@/images/monitor.png";
-import associatedImg from "@/images/associated.jpg";
 
 import Logo from "@/images/svg/Logo.astro";
-import Article from "@/components/ui/Article.astro";
 
+import monitorImg from "@/images/monitor.png";
+import associatedImg from "@/images/associated.jpg";
 import ArticleImage1 from "@/images/article1.jpg";
 import ArticleImage2 from "@/images/article2.jpg";
 import ArticleImage3 from "@/images/article3.jpg";
 
-import i18n from "@/i18n/home/es.json";
+import type { Home } from "@/i18n/home/type"
+interface Props {
+  i18n: Home
+}
+const { i18n } = Astro.props
 ---
 
 <section class="-mt-10 clip bg-white h-20 w-full"></section>
 
 <section class="flex flex-col items-center w-full bg-white">
-  <Image src={monitorImg} alt="campaign-metrics" class="w-1/2 -mt-32 z-10" />
+  <Image src={monitorImg} alt="campaign-metrics" class="w-full md:w-1/2 -mt-32 z-10" />
   <Image
     src={associatedImg}
     alt="associated-with-suads"
-    class="w-3/4 opacity-60"
+    class="w-full md:w-3/4 md:opacity-60"
   />
 </section>
 
 <div class="inline-flex items-center justify-center w-full bg-white pt-20 pb-4">
   <hr class="w-3/4 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-40000" />
-  <Logo class="w-20 h-20 absolute bg-white" />
+  <Logo class="w-14 h-14 md:w-20 md:h-20 absolute bg-white" />
 </div>
 
 <section class="flex flex-col items-center bg-white">
   <div class="container px-10">
-    <header class="flex mt-20">
-      <div class="w-1/2">
+    <header class="md:flex mt-20">
+      <div class="w-full md:w-1/2 mb-4 md:mb-0">
         <p
-          class="text-lg font-semibold uppercase tracking-wide text-blue-950 pl-3"
+          class="text-lg font-semibold uppercase tracking-wide text-blue-950 md:pl-3 text-center md:text-left"
         >
           ¿ p o r q u é <span class="px-2"></span> s u a d s ?
         </p>
-        <h2 class="text-7xl uppercase font-semibold text-blue-900 mt-10">
+        <h2 class="text-5xl md:text-7xl uppercase font-semibold text-blue-900 mt-10">
           {i18n.WHY_US_SECTION.TITLE}
           <span class="text-pink-500">{i18n.WHY_US_SECTION.TITLE_HL}</span>
         </h2>
       </div>
 
-      <div class="w-1/2 mt-72 mb-16">
+      <div class="w-full md:w-1/2 md:mt-72 md:mb-16">
         <p class="text-2xl tracking-wider leading-loose text-blue-950">
           {i18n.WHY_US_SECTION.SUBTITLE}<strong
             >{i18n.WHY_US_SECTION.SUBTITLE_HL}</strong
