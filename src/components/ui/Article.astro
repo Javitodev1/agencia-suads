@@ -21,7 +21,7 @@ const { title, tHighlight, content, cHighlight, imageSrc, imageAlt, start} = Ast
     {"md:pl-4": start === 'right'},
     ]}>
     <h1 class="mb-4 text-3xl font-semibold text-blue-900">{title} <strong class="text-pink-600">{tHighlight}</strong></h1>
-    <p class="text-xl text-balance text-blue-950 leading-relaxed">{content} <strong class="text-pink-600">{cHighlight}</strong></p>
+    <p class="text-xl text-balance text-blue-950 leading-relaxed mb-4 md:mb-0">{content} <strong class="text-pink-600">{cHighlight}</strong></p>
   </div>
   <div class="md:w-1/2">
     <Image src={imageSrc} alt={imageAlt} class="rounded-md">
