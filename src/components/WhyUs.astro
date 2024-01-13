@@ -1,37 +1,18 @@
 ---
-import Article from "@/components/ui/Article.astro";
-import { Image } from "astro:assets";
+import HighlightArticle from "@/components/custom/HighlightArticle.astro";
 
-import Logo from "@/images/svg/Logo.astro";
+import ArticleImage1 from "images/article1.jpg";
+import ArticleImage2 from "images/article2.jpg";
+import ArticleImage3 from "images/article3.jpg";
 
-import monitorImg from "@/images/monitor.png";
-import associatedImg from "@/images/associated.jpg";
-import ArticleImage1 from "@/images/article1.jpg";
-import ArticleImage2 from "@/images/article2.jpg";
-import ArticleImage3 from "@/images/article3.jpg";
-
-import type { Home } from "@/i18n/home/type"
+import type {I18N} from "@/i18n/i18n"
 interface Props {
-  i18n: Home
+  i18n: I18N
 }
+
 const { i18n } = Astro.props
+const whyUs = i18n.HOME.WHY_US_SECTION
 ---
-
-<section class="-mt-10 clip bg-white h-20 w-full"></section>
-
-<section class="flex flex-col items-center w-full bg-white">
-  <Image src={monitorImg} alt="campaign-metrics" class="w-full md:w-1/2 -mt-32 z-10" />
-  <Image
-    src={associatedImg}
-    alt="associated-with-suads"
-    class="w-full md:w-3/4 md:opacity-60"
-  />
-</section>
-
-<div class="inline-flex items-center justify-center w-full bg-white md:py-20 py-10">
-  <hr class="w-3/4 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-40000" />
-  <Logo class="w-14 h-14 md:w-20 md:h-20 absolute bg-white" />
-</div>
 
 <section class="flex flex-col items-center bg-white">
   <div class="container px-10">
@@ -43,54 +24,48 @@ const { i18n } = Astro.props
           ¿ p o r q u é <span class="px-2"></span> s u a d s ?
         </p>
         <h2 class="text-5xl md:text-7xl uppercase font-semibold text-blue-900 mt-10">
-          {i18n.WHY_US_SECTION.TITLE}
-          <span class="text-pink-500">{i18n.WHY_US_SECTION.TITLE_HL}</span>
+          {whyUs.TITLE}
+          <span class="text-pink-500">{whyUs.TITLE_HL}</span>
         </h2>
       </div>
 
       <div class="w-full md:w-1/2 md:mt-72 md:mb-16">
         <p class="text-2xl tracking-wider leading-loose text-blue-950">
-          {i18n.WHY_US_SECTION.SUBTITLE}<strong
-            >{i18n.WHY_US_SECTION.SUBTITLE_HL}</strong
+          {whyUs.SUBTITLE}<strong
+            >{whyUs.SUBTITLE_HL}</strong
           >
         </p>
       </div>
     </header>
 
     <!-- First -->
-    <Article
-      title={i18n.WHY_US_SECTION.A1_TITLE}
-      tHighlight={i18n.WHY_US_SECTION.A1_TITLE_HL}
-      content={i18n.WHY_US_SECTION.A1_BODY}
-      imageSrc={ArticleImage1}
-      imageAlt="woman-smiling-boy-running"
-      start="left"
+    <HighlightArticle 
+      start="left",
+      title={whyUs.A1_TITLE},
+      titleHl={whyUs.A1_TITLE_HL},
+      body={whyUs.A1_BODY},
+      ImgUrl={ArticleImage1},
+      imgAlt="woman-smiling-boy-running"
     />
-
+    
     <!-- Second -->
-    <Article
-      title={i18n.WHY_US_SECTION.A2_TITLE}
-      tHighlight={i18n.WHY_US_SECTION.A2_TITLE_HL}
-      content={i18n.WHY_US_SECTION.A2_BODY}
-      imageSrc={ArticleImage2}
-      imageAlt="three-women-laughing"
-      start="right"
+    <HighlightArticle 
+      start="right",
+      title={whyUs.A2_TITLE},
+      titleHl={whyUs.A2_TITLE_HL},
+      body={whyUs.A2_BODY},
+      ImgUrl={ArticleImage2},
+      imgAlt="three-women-laughing"
     />
 
     <!-- Third -->
-    <Article
-      title={i18n.WHY_US_SECTION.A3_TITLE}
-      tHighlight={i18n.WHY_US_SECTION.A3_TITLE_HL}
-      content={i18n.WHY_US_SECTION.A3_BODY}
-      imageSrc={ArticleImage3}
-      imageAlt="2-men-cheerful"
-      start="left"
+    <HighlightArticle 
+      start="left",
+      title={whyUs.A3_TITLE},
+      titleHl={whyUs.A3_TITLE_HL},
+      body={whyUs.A3_BODY},
+      ImgUrl={ArticleImage3},
+      imgAlt="three-women-laughing"
     />
   </div>
 </section>
-
-<style>
-  .clip {
-    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
-  }
-</style>

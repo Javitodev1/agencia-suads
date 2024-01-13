@@ -1,24 +1,28 @@
-export interface Home {
+export interface I18N {
   TITLE_SEO: string
   DESCRIPTION_SEO: string
-  NAVBAR: Navbar
   HEADER: Header
-  WHY_US_SECTION: WhyUsSection
+  HOME: Home
 }
 
-export interface Navbar {
+export interface Header {
   HOME: string
   SERVICES: string
   CONTACT: string
   ABOUT: string
 }
 
-export interface Header {
+export interface Home {
+  HERO: Hero
+  WHY_US_SECTION: WhyUsSection
+}
+
+export interface Hero {
   TITLE: string
   TITLE_HL: string
   SUBTITLE_L1: string
   SUBTITLE_L2: string
-  SUBTITLE_HL: string
+  SUBTITLE_L2_HL: string
   CALL_TO_ACTION: string
 }
 

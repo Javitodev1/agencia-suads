@@ -1,0 +1,30 @@
+---
+import Article from "@/components/ui/Article.astro"
+
+interface Props {
+  start: "right" | "left",
+  title: string,
+  titleHl: string,
+  body: string,
+  ImgUrl: ImageMetadata,
+  imgAlt: string,
+}
+
+const { start, title, titleHl, body, ImgUrl, imgAlt} = Astro.props
+---
+
+<Article start={start}>
+  <h2 slot="title" 
+    class="text-blue-900">{title} 
+    <strong 
+      class="text-pink-600">{titleHl}
+    </strong>
+  </h2>
+  <p slot="body"
+    class="text-blue-950">{body}
+  </p>
+  <img slot="img" 
+    class="rounded-md"
+    src={ImgUrl.src} alt={imgAlt}
+  />
+</Article>
