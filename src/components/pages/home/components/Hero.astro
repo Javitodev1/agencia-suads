@@ -1,15 +1,17 @@
 ---
-import type { I18N } from '@/i18n/i18n'
+import background from "@public/images/home/background.jpg";
+import type I18N from "../i18n";
 interface Props {
-  i18n: I18N
+  i18n: I18N;
 }
 
-const { i18n } = Astro.props
-const hero = i18n.HOME.HERO
+const { i18n } = Astro.props;
+const hero = i18n.HERO;
 ---
 
 <!-- Header -->
 <section
+  style={`background-image: url(${background.src})`}
   class="bg-image bg-fixed bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen w-full"
 >
   <span
@@ -35,9 +37,3 @@ const hero = i18n.HOME.HERO
     >
   </header>
 </section>
-
-<style>
-  .bg-image {
-    background-image: url("/images/background.jpg");
-  }
-</style>

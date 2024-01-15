@@ -1,0 +1,54 @@
+---
+import HighlightArticle from "@/components/ui/HighlightArticle.astro";
+
+import ArticleImage1 from "@public/images/home/article1.jpg";
+import ArticleImage2 from "@public/images/home/article2.jpg";
+import ArticleImage3 from "@public/images/home/article3.jpg";
+
+import type I18N from "../i18n";
+interface Props {
+  i18n: I18N;
+}
+
+const { i18n } = Astro.props;
+const whyUs = i18n.WHY_US;
+const haImages = [ArticleImage1, ArticleImage2, ArticleImage3];
+---
+
+<section class="flex flex-col items-center bg-white">
+  <div class="container px-10">
+    <header class="md:flex">
+      <div class="w-full md:w-1/2 mb-4 md:mb-0">
+        <p
+          class="text-lg font-semibold uppercase tracking-wide text-blue-950 md:pl-3 text-center md:text-left"
+        >
+          ¿ p o r q u é <span class="px-2"></span> s u a d s ?
+        </p>
+        <h2
+          class="text-5xl md:text-6xl xl:text-7xl uppercase font-semibold text-blue-900 mt-10"
+        >
+          {whyUs.TITLE}
+          <span class="text-pink-500">{whyUs.TITLE_HL}</span>
+        </h2>
+      </div>
+
+      <div class="w-full md:w-1/2 md:mt-72 md:mb-16">
+        <p class="text-2xl tracking-wider leading-loose text-blue-950">
+          {whyUs.SUBTITLE}<strong>{whyUs.SUBTITLE_HL}</strong>
+        </p>
+      </div>
+    </header>
+
+    {
+      [...whyUs.HIGHLIGHT_ARTICLES].map((props, index) => (
+        <HighlightArticle
+          start={props.start}
+          title={props.title}
+          titleHl={props.titleHl}
+          body={props.body}
+          imgUrl={haImages[index]}
+        />
+      ))
+    }
+  </div>
+</section>

@@ -1,22 +1,23 @@
 ---
-import Logo from "@/svg/Logo.astro"
+import Logo from "@/components/icons/Logo.astro";
 
-import type { I18N } from "@/i18n/i18n"
+import type I18N from "../i18n/index";
 interface Props {
-  i18n: I18N
+  i18n: I18N;
 }
-const { i18n } = Astro.props
-const header = i18n.HEADER
+const { i18n } = Astro.props;
+const header = i18n.HEADER;
 ---
+
 <header class="absolute top-0 left-0 w-full py-4 z-10">
   <div class="container flex items-center justify-between px-10">
     <span class="flex gap-4 items-center uppercase font-semibold text-3xl">
       <Logo class="w-8 h-8" />
       <h1 class="text-white">su<strong class="text-pink-600">ads</strong></h1>
     </span>
-    
+
     <label for="hamburger" class="cursor-pointer">
-      <input type="checkbox" id="hamburger" class="hidden">
+      <input type="checkbox" id="hamburger" class="hidden" />
       <span class="block bg-white h-1 w-8 rounded-full my-2"></span>
       <span class="block bg-white h-1 w-8 rounded-full my-2"></span>
       <span class="block bg-white h-1 w-8 rounded-full my-2"></span>
@@ -31,6 +32,4 @@ const header = i18n.HEADER
   </div>
 </header>
 
-<style>
-
-</style>
+<style></style>

@@ -6,8 +6,8 @@
       "@/*": [
         "src/*"
       ],
-      "images/*": [
-        "public/images/*"
+      "@public/*": [
+        "public/*"
       ]
     }
   }

@@ -1,0 +1,46 @@
+{
+  "LAYOUT": {
+    "TITLE_SEO": "Suads",
+    "DESCRIPTION_SEO": ""
+  },
+  "HEADER": {
+    "HOME": "Inicio",
+    "SERVICES": "Servicios",
+    "CONTACT": "Contacto",
+    "ABOUT": "Conocenos"
+  },
+  "HERO": {
+    "TITLE": "Mejora los resultados de tus campañas con",
+    "TITLE_HL": "IA predictiva",
+    "SUBTITLE_L1": "Entiende cómo reacciona tu audiencia y predice el impacto de tus",
+    "SUBTITLE_L2": "contenidos",
+    "SUBTITLE_L2_HL": "para conseguir mejores resultados",
+    "CALL_TO_ACTION": "Crea tu cuenta gratis"
+  },
+  "WHY_US": {
+    "TITLE": "mejora el rendimiento",
+    "TITLE_HL": "de tus campañas",
+    "SUBTITLE": "El algoritmo propio de Suads analiza las reacciones y emociones detallando el",
+    "SUBTITLE_HL": "ratio de aceptación de tu audiencia y el nivel de retención de tu contenido.",
+    "HIGHLIGHT_ARTICLES": [
+      {
+        "start": "left",
+        "title": "Analiza a tu audiencia de manera",
+        "titleHl": "mucho más rápida y precisa",
+        "body": "Crea campañas que funcionen mejor que nunca con Feeder, ya que podrás analizar a tu Audiencia de manera rápida, sencilla y precisa y así poder aumentar el Impacto y el Engagement de los contenidos de tus clientes."
+      },
+      {
+        "start": "right",
+        "title": "Lleva tus anuncios",
+        "titleHl": "a lo más alto",
+        "body": "Optimiza el Rendimiento de tus campañas obteniendo una mejora instantánea en los Resultados de tus ads gracias al análisis en tiempo real de Feeder."
+      },
+      {
+        "start": "left",
+        "title": "Consigue",
+        "titleHl": "mejores productos y servicios",
+        "body": "Testea el Impacto de tus creaciones en tu audiencia, aprende de tu Target y lleva a tu producto al siguiente nivel."
+      }
+    ]
+  }
+}

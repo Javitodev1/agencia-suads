@@ -1,17 +1,20 @@
 ---
 interface Props {
-  start: 'left' | 'right',
+  start: string;
 }
 
 const { start } = Astro.props;
 ---
 
 <article class="md:flex md:gap-4 py-12">
-  <div class="md:w-1/2" class:list={[
-    {"md:order-last": start === 'right'},
-    {"md:pr-4": start === 'left'},
-    {"md:pl-4": start === 'right'},
-    ]}>
+  <div
+    class="md:w-1/2"
+    class:list={[
+      { "md:order-last": start === "right" },
+      { "md:pr-4": start === "left" },
+      { "md:pl-4": start === "right" },
+    ]}
+  >
     <div class="mb-4 text-3xl font-semibold">
       <slot name="title" />
     </div>

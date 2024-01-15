@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "./components/Header.astro";
+import Hero from "./components/Hero.astro";
+import Partners from "./components/Partners.astro";
+import WhyUs from "./components/WhyUs.astro";
+
+import type I18N from "./i18n";
+import spanish from "./i18n/es.json";
+
+const i18n = spanish as I18N;
+const layout = i18n.LAYOUT;
+---
+
+<Layout title={layout.TITLE_SEO} description={layout.DESCRIPTION_SEO}>
+  <Header i18n={i18n} />
+  <Hero i18n={i18n} />
+  <Partners />
+  <WhyUs i18n={i18n} />
+</Layout>

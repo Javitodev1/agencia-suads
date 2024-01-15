@@ -1,8 +1,13 @@
-export interface I18N {
+export default interface I18N {
+  LAYOUT: Layout
+  HEADER: Header
+  HERO: Hero
+  WHY_US: WhyUs
+}
+
+export interface Layout {
   TITLE_SEO: string
   DESCRIPTION_SEO: string
-  HEADER: Header
-  HOME: Home
 }
 
 export interface Header {
@@ -10,11 +15,6 @@ export interface Header {
   SERVICES: string
   CONTACT: string
   ABOUT: string
-}
-
-export interface Home {
-  HERO: Hero
-  WHY_US_SECTION: WhyUsSection
 }
 
 export interface Hero {
@@ -26,18 +26,17 @@ export interface Hero {
   CALL_TO_ACTION: string
 }
 
-export interface WhyUsSection {
+export interface WhyUs {
   TITLE: string
   TITLE_HL: string
   SUBTITLE: string
   SUBTITLE_HL: string
-  A1_TITLE: string
-  A1_TITLE_HL: string
-  A1_BODY: string
-  A2_TITLE: string
-  A2_TITLE_HL: string
-  A2_BODY: string
-  A3_TITLE: string
-  A3_TITLE_HL: string
-  A3_BODY: string
+  HIGHLIGHT_ARTICLES: HighlightArticles[]
+}
+
+export interface HighlightArticles {
+  start: string
+  title: string
+  titleHl: string
+  body: string
 }
