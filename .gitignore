@@ -24,3 +24,6 @@ domain
 
 # package manager
 *.lockb
+
+# VS Code generated files
+.vscode/
