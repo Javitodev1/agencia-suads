@@ -1,3 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import SideMenu from "./components/SideMenu.astro";
 ---
+
+<Layout title="Atlantico - Plantilla Personalizable" description="">
+  <div class="flex">
+    <SideMenu />
+    <main class="flex-1 overflow-y-auto text-white">
+      <section class="w-full h-screen">Ola</section>
+      <section class="w-full h-screen">Ola</section>
+    </main>
+  </div>
+</Layout>
