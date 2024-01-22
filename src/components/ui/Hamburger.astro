@@ -1,0 +1,58 @@
+---
+interface Props {
+  class?: string
+  bg?: string
+}
+const { class: className, bg = 'bg-black' } = Astro.props
+---
+
+<label
+  for="hamburger"
+  class:list={[
+    'md:hidden',
+    'cursor-pointer',
+    'overflow-hidden',
+    'w-8',
+    'h-7',
+    'grid',
+    'grid-cols-2',
+    'content-between',
+    '[&>span]:w-full',
+    '[&>span]:h-1',
+    '[&>span]:inline-block',
+    '[&>span]:duration-300',
+    className,
+  ]}
+>
+  <input type="checkbox" id="hamburger" class="hidden peer" />
+  <span
+    class:list={[
+      bg,
+      'peer-checked:rotate-45',
+      'peer-checked:translate-y-2',
+      'peer-checked:translate-x-1',
+    ]}></span>
+  <span
+    class:list={[
+      bg,
+      'peer-checked:-rotate-45',
+      'peer-checked:translate-y-2',
+      'peer-checked:-translate-x-1',
+    ]}></span>
+  <span class:list={[bg, 'peer-checked:-translate-x-4']}></span>
+  <span class:list={[bg, 'peer-checked:translate-x-4']}></span>
+  <span
+    class:list={[
+      bg,
+      'peer-checked:-rotate-45 ',
+      'peer-checked:-translate-y-2',
+      'peer-checked:translate-x-1',
+    ]}></span>
+  <span
+    class:list={[
+      bg,
+      'peer-checked:rotate-45 ',
+      'peer-checked:-translate-y-2',
+      'peer-checked:-translate-x-1',
+    ]}></span>
+</label>

@@ -1,0 +1,65 @@
+---
+import Hamburger from './Hamburger.astro'
+interface Props {
+  class?: string
+  bgHeader?: string
+  bgHamburger?: string
+}
+const {
+  class: className,
+  bgHeader = 'bg-white',
+  bgHamburger = 'bg-black',
+} = Astro.props
+---
+
+<header
+  class:list={[
+    'top-0',
+    'left-0',
+    'flex',
+    'items-center',
+    'justify-center',
+    'w-full',
+    'px-6',
+    'py-3',
+    'z-10',
+    bgHeader,
+    className,
+  ]}
+>
+  <div class="container flex items-center justify-between">
+    <Hamburger bg={bgHamburger} class="z-20" />
+
+    <slot name="logo" />
+
+    <nav
+      id="navbar"
+      class:list={[
+        'fixed transitions overflow-hidden z-10 top-0 bottom-0 left-0 w-1/2 max-w-0 md:max-w-full md:static md:w-fit text-nowrap',
+        bgHeader,
+      ]}
+    >
+      <div class="py-10 md:py-0"></div>
+      <slot name="links" />
+    </nav>
+  </div>
+</header>
+
+<style>
+  .transitions {
+    transition: max-width 300ms linear;
+  }
+</style>
+
+<script>
+  const navbar = document.getElementById('navbar')!
+  const hamburger = document.getElementById('hamburger')! as HTMLInputElement
+
+  hamburger.addEventListener('change', () => {
+    if (hamburger.checked) {
+      navbar.style.maxWidth = '100%'
+    } else {
+      navbar.style.maxWidth = '0%'
+    }
+  })
+</script>
