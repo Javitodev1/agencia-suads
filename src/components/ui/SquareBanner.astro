@@ -1,0 +1,24 @@
+---
+interface Props {
+  image: ImageMetadata;
+  href: string;
+}
+
+const { image, href } = Astro.props;
+---
+
+<header class="w-96 aspect-square relative overflow-hidden rounded-3xl">
+  <a href={href}>
+    <div
+      style=`background-image: url(${image.src})`
+      class="w-full h-full bg-no-repeat bg-cover bg-center transition-transform duration-1000 ease-in-out hover:bg- flex items-center"
+    >
+      <span
+        class="w-full h-full opacity-70 bg-rohan_green absolute top-0 left-0"
+      ></span>
+      <h2 class="text-rohan_white text-3xl font-semibold text-center z-10">
+        <slot />
+      </h2>
+    </div>
+  </a>
+</header>

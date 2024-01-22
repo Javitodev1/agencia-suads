@@ -7,8 +7,8 @@ export default {
 			colors: {
 				'rohan_green': '#124632',
 				'rohan_white': '#fefdfa',
-				'rohan_red': '#924d33',
-				'rohan_gold': '#d2b25f',
+				'rohan_red': '#4E1500',
+				'rohan_gold': '#F8D885',
 			},
 			fontFamily: {
 				'baskerville': ['"Libre Baskerville"']
