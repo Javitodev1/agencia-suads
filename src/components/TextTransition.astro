@@ -1,0 +1,44 @@
+---
+interface Props {
+  class?: string
+  texts?: string[]
+}
+
+const { class: className, texts = [] } = Astro.props
+---
+
+<div class="h-14 overflow-hidden inline-block" class:list={className}>
+  <div class="slide-up">
+    {texts.map((text) => (
+      <div class="overflow-hidden slide-out-top">
+        <h2 class="h-14">{text}</h2>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .slide-up {
+    animation: slide-up 15s steps(3) infinite;
+  }
+
+  .slide-out-top {
+    animation: slide-out-top 5s ease-out infinite;
+  }
+
+  @keyframes slide-up {
+    to {
+      transform: translateY(-162px);
+    }
+  }
+
+  @keyframes slide-out-top {
+    0%,
+    85% {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-56px);
+    }
+  }
+</style>

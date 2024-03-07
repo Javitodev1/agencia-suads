@@ -1,0 +1,57 @@
+---
+import Layout from "@/Layouts/Layout.astro"
+import TextTransition from "@/components/TextTransition.astro"
+import BgHero from "@public/images/bg-hero.jpeg"
+import BgStars from "@public/images/bg-stars.jpeg"
+
+const animated_text = [
+  "posicionar tu marca",
+  "conseguir mas tráfico",
+  "aumentar tus ventas",
+]
+---
+
+<style>
+  .hero-gradient {
+    background: rgb(4, 7, 34);
+    background: linear-gradient(
+      90deg,
+      rgba(4, 7, 34, 0.9) 50%,
+      rgba(4, 7, 34, 0.4) 75%,
+      rgba(4, 7, 34, 0) 100%
+    );
+  }
+</style>
+
+<Layout>
+  <div class="relative z-0 w-full h-screen" id="hero">
+    <!-- Background Image -->
+    <div class="absolute top-0 left-0 w-full h-full">
+      <div class="grid grid-cols-2 w-full h-full">
+        <div
+        style=`background-image: url(${BgStars.src});`
+          class="bg-cover bg-no-repeat bg-center"
+        ></div>
+        <div
+          style=`background-image: url(${BgHero.src});`
+          class="bg-cover bg-no-repeat bg-center"
+        >
+        </div>
+      </div>
+    </div>
+    
+    <!-- Background gradient -->
+    <span class="hero-gradient absolute top-0 left-0 w-full h-full"></span>
+
+    <!-- Content Container -->
+    <div
+      class="absolute top-1/2 -translate-y-1/2 left-20 text-4xl uppercase text-blue-white font-semibold"
+    >
+      <p class="mb-2">potencia tu negocio logrando</p>
+      <TextTransition
+        texts={animated_text}
+        class="text-vivid-sky-blue text-6xl font-bold"
+      />
+    </div>
+  </div>
+</Layout>
